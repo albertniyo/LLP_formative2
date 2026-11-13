@@ -1,0 +1,41 @@
+--- Timing (each run verified with cmp) ---
+copy_sys: copied 104857600 bytes with 512-byte buffer in 0.983472 seconds
+copy_sys: copied 104857600 bytes with 512-byte buffer in 0.823160 seconds
+copy_sys: copied 104857600 bytes with 512-byte buffer in 0.784530 seconds
+AVERAGE copy_sys 512 0.863721
+copy_sys: copied 104857600 bytes with 4096-byte buffer in 0.179144 seconds
+copy_sys: copied 104857600 bytes with 4096-byte buffer in 0.184541 seconds
+copy_sys: copied 104857600 bytes with 4096-byte buffer in 0.177433 seconds
+AVERAGE copy_sys 4096 0.180373
+copy_sys: copied 104857600 bytes with 65536-byte buffer in 0.072887 seconds
+copy_sys: copied 104857600 bytes with 65536-byte buffer in 0.059102 seconds
+copy_sys: copied 104857600 bytes with 65536-byte buffer in 0.059314 seconds
+AVERAGE copy_sys 65536 0.063768
+copy_stdio: copied 104857600 bytes with 512-byte buffer in 0.231648 seconds
+copy_stdio: copied 104857600 bytes with 512-byte buffer in 0.202613 seconds
+copy_stdio: copied 104857600 bytes with 512-byte buffer in 0.223656 seconds
+AVERAGE copy_stdio 512 0.219306
+copy_stdio: copied 104857600 bytes with 4096-byte buffer in 0.189905 seconds
+copy_stdio: copied 104857600 bytes with 4096-byte buffer in 0.195078 seconds
+copy_stdio: copied 104857600 bytes with 4096-byte buffer in 0.191800 seconds
+AVERAGE copy_stdio 4096 0.192261
+copy_stdio: copied 104857600 bytes with 65536-byte buffer in 0.091857 seconds
+copy_stdio: copied 104857600 bytes with 65536-byte buffer in 0.085639 seconds
+copy_stdio: copied 104857600 bytes with 65536-byte buffer in 0.074547 seconds
+AVERAGE copy_stdio 65536 0.084014
+
+--- sha256sum check of the last copy ---
+1de3e53a17b3c9273b09e6cb8932a28b6f685c50ff6e079a2cc38dc4c70aaba2  big.bin
+1de3e53a17b3c9273b09e6cb8932a28b6f685c50ff6e079a2cc38dc4c70aaba2  out.bin
+
+--- Error handling ---
+missing.bin: No such file or directory
+missing.bin: No such file or directory
+/no_such_dir/out.bin: No such file or directory
+/no_such_dir/out.bin: No such file or directory
+copy_sys: copied 104857600 bytes with 512-byte buffer in 9.961565 seconds
+copy_sys: copied 104857600 bytes with 4096-byte buffer in 1.537710 seconds
+copy_sys: copied 104857600 bytes with 65536-byte buffer in 0.174011 seconds
+copy_stdio: copied 104857600 bytes with 512-byte buffer in 1.582622 seconds
+copy_stdio: copied 104857600 bytes with 4096-byte buffer in 1.457279 seconds
+copy_stdio: copied 104857600 bytes with 65536-byte buffer in 0.214641 seconds
