@@ -1,0 +1,78 @@
+--- files ---
+logs/auth.log         26214416 bytes
+logs/billing.log       3145742 bytes
+logs/cache.log        52428880 bytes
+logs/db.log           10485803 bytes
+logs/gateway.log       1048593 bytes
+logs/mail.log         41943141 bytes
+logs/metrics.log       5242952 bytes
+logs/payments.log     15728724 bytes
+logs/queue.log         2097252 bytes
+logs/scheduler.log    31457347 bytes
+logs/search.log        8388702 bytes
+logs/web.log          20971566 bytes
+219153118	total
+
+--- sample run (8 threads, with a missing file) ---
+missing.log: No such file or directory
+total matching lines across 12 files: 102458
+total lines: 2051452, skipped files: 1, threads: 8
+thread 1 processed 1 file(s)
+thread 2 processed 4 file(s)
+thread 3 processed 1 file(s)
+thread 4 processed 1 file(s)
+thread 5 processed 1 file(s)
+thread 6 processed 2 file(s)
+thread 7 processed 1 file(s)
+thread 8 processed 1 file(s)
+elapsed time: 0.109982 seconds
+--- report.txt ---
+logs/billing.log: 1382 matching lines out of 28968 (thread 2)
+logs/gateway.log: 465 matching lines out of 9659 (thread 6)
+logs/queue.log: 964 matching lines out of 19675 (thread 2)
+logs/search.log: 3889 matching lines out of 77964 (thread 2)
+logs/metrics.log: 2455 matching lines out of 48274 (thread 7)
+logs/db.log: 5111 matching lines out of 101216 (thread 4)
+logs/web.log: 10032 matching lines out of 200496 (thread 2)
+logs/payments.log: 7149 matching lines out of 143524 (thread 8)
+logs/auth.log: 12466 matching lines out of 248238 (thread 1)
+logs/scheduler.log: 14293 matching lines out of 284409 (thread 6)
+logs/mail.log: 19615 matching lines out of 397176 (thread 5)
+logs/cache.log: 24637 matching lines out of 491853 (thread 3)
+total matching lines across 12 files: 102458
+
+--- Verification against grep ---
+Per-file matching counts identical to grep -c
+grep total:    102458
+logscan total: 102458
+wc -l total:   2051452
+
+--- warm page cache (files already in RAM) ---
+warm             threads=1  runs: 0.232945 0.252811 0.204429  avg: 0.230062
+warm             threads=2  runs: 0.153680 0.129922 0.114348  avg: 0.132650
+warm             threads=4  runs: 0.107745 0.135513 0.113846  avg: 0.119035
+warm             threads=8  runs: 0.112538 0.107914 0.119302  avg: 0.113251
+
+--- cold page cache (evicted before every run) ---
+cold             threads=1  runs: 0.504744 0.528647 0.640747  avg: 0.558046
+cold             threads=2  runs: 0.413588 0.414399 0.412162  avg: 0.413383
+cold             threads=4  runs: 0.400885 0.404264 0.404123  avg: 0.403091
+cold             threads=8  runs: 0.403100 0.402843 0.428933  avg: 0.411625
+
+--- queue order, warm cache ---
+alphabetical     threads=2  runs: 0.119447 0.127992 0.124311  avg: 0.123917
+largest-first    threads=2  runs: 0.154671 0.115941 0.134675  avg: 0.135096
+smallest-first   threads=2  runs: 0.147205 0.139701 0.168079  avg: 0.151662
+alphabetical     threads=4  runs: 0.101177 0.107337 0.117400  avg: 0.108638
+largest-first    threads=4  runs: 0.109657 0.116771 0.102824  avg: 0.109751
+smallest-first   threads=4  runs: 0.111923 0.109684 0.113068  avg: 0.111558
+cache.log-only   threads=1  runs: 0.054301 0.044713 0.039425  avg: 0.046146
+
+--- mutex contention: futex calls with 8 threads ---
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 73.20    1.173392          21     53530           read
+ 26.76    0.428977      214488         2           futex
+  0.04    0.000615          38        16           openat
+------ ----------- ----------- --------- --------- ----------------
+100.00    1.602984          29     53548           total

@@ -1,0 +1,13 @@
+logs/billing.log: 1382 matching lines out of 28968 (thread 2)
+logs/gateway.log: 465 matching lines out of 9659 (thread 2)
+logs/db.log: 5111 matching lines out of 101216 (thread 4)
+logs/metrics.log: 2455 matching lines out of 48274 (thread 4)
+logs/auth.log: 12466 matching lines out of 248238 (thread 1)
+logs/queue.log: 964 matching lines out of 19675 (thread 1)
+logs/payments.log: 7149 matching lines out of 143524 (thread 4)
+logs/search.log: 3889 matching lines out of 77964 (thread 4)
+logs/cache.log: 24637 matching lines out of 491853 (thread 3)
+logs/scheduler.log: 14293 matching lines out of 284409 (thread 1)
+logs/mail.log: 19615 matching lines out of 397176 (thread 2)
+logs/web.log: 10032 matching lines out of 200496 (thread 4)
+total matching lines across 12 files: 102458
