@@ -1,0 +1,32 @@
+--- program output --
+perfect numbers found: 6 28 496 8128
+synchronized total number of perfect numbers between 1 and 100000 is 4
+single-threaded time: 0.204254 seconds
+multi-threaded time:  0.089726 seconds
+
+-- 5 runs (single-threaded / multi-threaded seconds) ---
+0.211417 0.087847 
+0.213651 0.092974 
+0.200625 0.083067 
+0.195868 0.086688 
+0.199221 0.086066 
+AVERAGE 0.204156 0.087328 speedup 2.34x
+
+--- per-thread work (-v) ---
+
+Thread  Range              Loop iterations  Share   Time (s)
+     0       1 -  12500           913055    4.4%  0.028919
+     1   12501 -  25000          1684824    8.0%  0.026832
+     2   25001 -  37500          2187305   10.4%  0.060474
+     3   37501 -  50000          2593615   12.4%  0.039070
+     4   50001 -  62500          2944326   14.1%  0.078346
+     5   62501 -  75000          3257699   15.6%  0.079625
+     6   75001 -  87500          3543451   16.9%  0.071157
+     7   87501 - 100000          3807895   18.2%  0.070372
+Speedup: 2.49x
+
+--- pinned to CPU sets with taskset (3 runs each, averaged) ---
+cpus=0    single 0.196869  multi 0.194373  speedup 1.01x
+cpus=0,1  single 0.194263  multi 0.155722  speedup 1.25x
+cpus=0,2  single 0.193935  multi 0.101795  speedup 1.91x
+cpus=0-3  single 0.199576  multi 0.084945  speedup 2.35x
