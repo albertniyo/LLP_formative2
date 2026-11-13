@@ -53,3 +53,7 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# for question two
+big.bin
+out.bin
