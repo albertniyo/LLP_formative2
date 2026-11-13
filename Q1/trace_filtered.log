@@ -1,0 +1,239 @@
+9032  execve("./pipeline", ["./pipeline"], 0x7ffdaad701a8 /* 77 vars */) = 0
+9032  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+9032  close(3)                          = 0
+9032  openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+9032  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300y\2\0\0\0\0\0"..., 1024) = 1024
+9032  close(3)                          = 0
+9032  pipe2([3, 4], 0)                  = 0
+9032  pipe2([5, 6], 0)                  = 0
+9032  pipe2([7, 8], 0)                  = 0
+9032  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fad114f9a10) = 9033
+9032  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+9033  dup2(4, 1)                        = 1
+9033  close(3)                          = 0
+9033  close(4)                          = 0
+9033  close(5)                          = 0
+9033  close(6 <unfinished ...>
+9032  <... clone resumed>, child_tidptr=0x7fad114f9a10) = 9034
+9034  dup2(3, 0 <unfinished ...>
+9033  <... close resumed>)              = 0
+9032  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+9034  <... dup2 resumed>)               = 0
+9033  close(7)                          = 0
+9033  close(8)                          = 0
+9033  execve("/run/user/1000/fnm_multishells/8703_1794596669661/bin/cat", ["cat", "/etc/passwd"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9032  <... clone resumed>, child_tidptr=0x7fad114f9a10) = 9035
+9034  dup2(6, 1)                        = 1
+9034  close(3)                          = 0
+9033  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9034  close(4 <unfinished ...>
+9033  execve("/home/kaya4a/.local/share/fnm/cat", ["cat", "/etc/passwd"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9035  dup2(5, 0 <unfinished ...>
+9034  <... close resumed>)              = 0
+9032  close(3 <unfinished ...>
+9035  <... dup2 resumed>)               = 0
+9033  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9032  <... close resumed>)              = 0
+9035  dup2(8, 1 <unfinished ...>
+9034  close(5 <unfinished ...>
+9032  close(4 <unfinished ...>
+9035  <... dup2 resumed>)               = 1
+9033  execve("/home/kaya4a/flutter/bin/cat", ["cat", "/etc/passwd"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9034  <... close resumed>)              = 0
+9033  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9033  execve("/home/kaya4a/.local/bin/cat", ["cat", "/etc/passwd"], 0x7ffcfcc3e368 /* 77 vars */) = -1 ENOENT (No such file or directory)
+9032  <... close resumed>)              = 0
+9035  close(3 <unfinished ...>
+9034  close(6 <unfinished ...>
+9033  execve("/home/kaya4a/.config/Code - OSS/User/globalStorage/github.copilot-chat/debugCommand/cat", ["cat", "/etc/passwd"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9032  close(5 <unfinished ...>
+9035  <... close resumed>)              = 0
+9034  <... close resumed>)              = 0
+9032  <... close resumed>)              = 0
+9035  close(4 <unfinished ...>
+9033  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9034  close(7 <unfinished ...>
+9032  close(6 <unfinished ...>
+9035  <... close resumed>)              = 0
+9032  <... close resumed>)              = 0
+9034  <... close resumed>)              = 0
+9032  close(8 <unfinished ...>
+9035  close(5 <unfinished ...>
+9032  <... close resumed>)              = 0
+9034  close(8 <unfinished ...>
+9035  <... close resumed>)              = 0
+9032  openat(AT_FDCWD, "result.txt", O_WRONLY|O_CREAT|O_TRUNC, 0644 <unfinished ...>
+9034  <... close resumed>)              = 0
+9035  close(6 <unfinished ...>
+9034  execve("/run/user/1000/fnm_multishells/8703_1794596669661/bin/cut", ["cut", "-d:", "-f7"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9035  <... close resumed>)              = 0
+9035  close(7 <unfinished ...>
+9034  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9032  <... openat resumed>)             = 3
+9035  <... close resumed>)              = 0
+9032  read(7 <unfinished ...>
+9034  execve("/home/kaya4a/.local/share/fnm/cut", ["cut", "-d:", "-f7"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9035  close(8 <unfinished ...>
+9034  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  <... close resumed>)              = 0
+9034  execve("/home/kaya4a/flutter/bin/cut", ["cut", "-d:", "-f7"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9035  execve("/run/user/1000/fnm_multishells/8703_1794596669661/bin/sort", ["sort", "-u"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9034  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  execve("/home/kaya4a/.local/share/fnm/sort", ["sort", "-u"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9034  execve("/home/kaya4a/.local/bin/cut", ["cut", "-d:", "-f7"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9033  execve("/home/kaya4a/.config/Code - OSS/User/globalStorage/github.copilot-chat/copilotCli/cat", ["cat", "/etc/passwd"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9035  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9034  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  execve("/home/kaya4a/flutter/bin/sort", ["sort", "-u"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9033  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9034  execve("/home/kaya4a/.config/Code - OSS/User/globalStorage/github.copilot-chat/debugCommand/cut", ["cut", "-d:", "-f7"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9035  execve("/home/kaya4a/.local/bin/sort", ["sort", "-u"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9033  execve("/home/kaya4a/.local/bin/cat", ["cat", "/etc/passwd"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9035  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9034  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  execve("/home/kaya4a/.config/Code - OSS/User/globalStorage/github.copilot-chat/debugCommand/sort", ["sort", "-u"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9033  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9034  execve("/home/kaya4a/.config/Code - OSS/User/globalStorage/github.copilot-chat/copilotCli/cut", ["cut", "-d:", "-f7"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9035  execve("/home/kaya4a/.config/Code - OSS/User/globalStorage/github.copilot-chat/copilotCli/sort", ["sort", "-u"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9033  execve("/home/kaya4a/.cargo/bin/cat", ["cat", "/etc/passwd"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9035  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9034  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  execve("/home/kaya4a/.local/bin/sort", ["sort", "-u"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9034  execve("/home/kaya4a/.local/bin/cut", ["cut", "-d:", "-f7"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9035  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  execve("/home/kaya4a/.cargo/bin/sort", ["sort", "-u"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9034  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9034  execve("/home/kaya4a/.cargo/bin/cut", ["cut", "-d:", "-f7"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9033  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9034  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  execve("/usr/local/sbin/sort", ["sort", "-u"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9034  execve("/usr/local/sbin/cut", ["cut", "-d:", "-f7"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9035  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9034  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  execve("/usr/local/bin/sort", ["sort", "-u"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9034  execve("/usr/local/bin/cut", ["cut", "-d:", "-f7"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9035  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  execve("/usr/bin/sort", ["sort", "-u"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9034  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9033  execve("/usr/local/sbin/cat", ["cat", "/etc/passwd"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9034  execve("/usr/bin/cut", ["cut", "-d:", "-f7"], 0x7ffcfcc3e368 /* 77 vars */) = 0
+9033  <... execve resumed>)             = -1 ENOENT (No such file or directory)
+9035  <... execve resumed>)             = 0
+9033  execve("/usr/local/bin/cat", ["cat", "/etc/passwd"], 0x7ffcfcc3e368 /* 77 vars */) = -1 ENOENT (No such file or directory)
+9034  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+9033  execve("/usr/bin/cat", ["cat", "/etc/passwd"], 0x7ffcfcc3e368 /* 77 vars */ <unfinished ...>
+9034  <... openat resumed>)             = 3
+9034  close(3)                          = 0
+9035  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+9033  <... execve resumed>)             = 0
+9035  close(3 <unfinished ...>
+9034  openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+9035  <... close resumed>)              = 0
+9034  <... openat resumed>)             = 3
+9033  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+9034  read(3 <unfinished ...>
+9033  <... openat resumed>)             = 3
+9034  <... read resumed>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300y\2\0\0\0\0\0"..., 1024) = 1024
+9033  close(3 <unfinished ...>
+9034  close(3 <unfinished ...>
+9033  <... close resumed>)              = 0
+9035  openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+9034  <... close resumed>)              = 0
+9035  <... openat resumed>)             = 3
+9035  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300y\2\0\0\0\0\0"..., 1024) = 1024
+9033  openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+9033  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300y\2\0\0\0\0\0"..., 1024) = 1024
+9035  close(3)                          = 0
+9033  close(3)                          = 0
+9034  openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+9035  openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+9034  close(3)                          = 0
+9035  <... openat resumed>)             = 3
+9033  openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+9034  read(0 <unfinished ...>
+9035  close(3)                          = 0
+9033  close(3)                          = 0
+9033  openat(AT_FDCWD, "/etc/passwd", O_RDONLY) = 3
+9033  read(3, "root:x:0:0::/root:/usr/bin/bash\n"..., 262144) = 1754
+9033  write(1, "root:x:0:0::/root:/usr/bin/bash\n"..., 1754 <unfinished ...>
+9034  <... read resumed>, "root:x:0:0::/root:/usr/bin/bash\n"..., 262144) = 1754
+9033  <... write resumed>)              = 1754
+9033  read(3, "", 262144)               = 0
+9034  read(0 <unfinished ...>
+9033  close(3)                          = 0
+9033  close(1 <unfinished ...>
+9034  <... read resumed>, "", 262144)   = 0
+9033  <... close resumed>)              = 0
+9034  close(0 <unfinished ...>
+9033  close(2 <unfinished ...>
+9034  <... close resumed>)              = 0
+9033  <... close resumed>)              = 0
+9034  write(1, "/usr/bin/bash\n/usr/bin/nologin\n/"..., 506) = 506
+9034  close(1)                          = 0
+9033  +++ exited with 0 +++
+9034  close(2 <unfinished ...>
+9032  <... read resumed>, 0x7ffcfcc3d210, 4096) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+9034  <... close resumed>)              = 0
+9032  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=9033, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+9032  read(7 <unfinished ...>
+9034  +++ exited with 0 +++
+9032  <... read resumed>, 0x7ffcfcc3d210, 4096) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+9032  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=9034, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+9032  read(7 <unfinished ...>
+9035  openat(AT_FDCWD, "/proc/self/cgroup", O_RDONLY) = 3
+9035  read(3, "0::/user.slice/user-1000.slice/u"..., 1024) = 83
+9035  close(3)                          = 0
+9035  openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-code-oss-1118.scope/cpu.max", O_RDONLY) = 3
+9035  read(3, "max 100000\n", 4096)     = 11
+9035  close(3)                          = 0
+9035  openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/cpu.max", O_RDONLY) = 3
+9035  read(3, "max 100000\n", 4096)     = 11
+9035  close(3)                          = 0
+9035  openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/cpu.max", O_RDONLY) = 3
+9035  read(3, "max 100000\n", 4096)     = 11
+9035  close(3)                          = 0
+9035  openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1000.slice/cpu.max", O_RDONLY) = 3
+9035  read(3, "max 100000\n", 4096)     = 11
+9035  close(3)                          = 0
+9035  openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/cpu.max", O_RDONLY) = 3
+9035  read(3, "max 100000\n", 4096)     = 11
+9035  close(3)                          = 0
+9035  openat(AT_FDCWD, "/sys/fs/cgroup//cpu.max", O_RDONLY) = -1 ENOENT (No such file or directory)
+9035  read(0, "/usr/bin/bash\n/usr/bin/nologin\n/"..., 131072) = 506
+9035  read(0, "", 126976)               = 0
+9035  write(1, "/usr/bin/bash\n/usr/bin/git-shell"..., 50 <unfinished ...>
+9032  <... read resumed>, "/usr/bin/bash\n/usr/bin/git-shell"..., 4096) = 50
+9035  <... write resumed>)              = 50
+9032  write(3, "/usr/bin/bash\n/usr/bin/git-shell"..., 50) = 50
+9032  read(7 <unfinished ...>
+9035  close(0)                          = 0
+9035  close(1 <unfinished ...>
+9032  <... read resumed>, "", 4096)     = 0
+9035  <... close resumed>)              = 0
+9032  close(7 <unfinished ...>
+9035  close(2 <unfinished ...>
+9032  <... close resumed>)              = 0
+9035  <... close resumed>)              = 0
+9032  close(3)                          = 0
+9032  openat(AT_FDCWD, "result.txt", O_RDONLY) = 3
+9035  +++ exited with 0 +++
+9032  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=9035, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+9032  write(1, "first 5 lines of result.txt:\n", 29) = 29
+9032  read(3, "/usr/bin/bash\n/usr/bin/git-shell"..., 4096) = 50
+9032  write(1, "/usr/bin/bash\n", 14)   = 14
+9032  write(1, "/usr/bin/git-shell\n", 19) = 19
+9032  write(1, "/usr/bin/nologin\n", 17) = 17
+9032  read(3, "", 4096)                 = 0
+9032  close(3)                          = 0
+9032  write(1, "total lines: 3\n", 15)  = 15
+9032  wait4(9033, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 9033
+9032  write(1, "child 9033 (cat) exited with sta"..., 38) = 38
+9032  wait4(9034, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 9034
+9032  write(1, "child 9034 (cut) exited with sta"..., 38) = 38
+9032  wait4(9035, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 9035
+9032  write(1, "child 9035 (sort) exited with st"..., 39) = 39
+9032  +++ exited with 0 +++
