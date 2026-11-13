@@ -15,7 +15,7 @@ removes duplicates, and then the parent saves the final output in [result.txt](r
 gcc -Wall -Wextra main.c -o pipeline
 ./pipeline
 strace -f -tt -o trace.log ./pipeline
-strace -f -o trace_filter.log \
+strace -f -o trace_filtered.log \
   -e trace=clone,clone3,fork,vfork,execve,pipe,pipe2,dup2,open,openat,read,write,close,wait4 ./pipeline
 ```
 
